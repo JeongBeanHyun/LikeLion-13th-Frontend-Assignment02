@@ -63,6 +63,10 @@ button:hover {
     margin-top: 20px;
 }
 
+#todoList:hover{
+    cursor: pointer;
+}
+
 input[type="checkbox"]{
     display: none;
 }
@@ -77,8 +81,11 @@ span::before{
     margin-right: 8px;
 }
 
-input[type="checkbox"]:checked{
-    background-color: plum;
+input[type="checkbox"]:checked + span::before{
+    background-image: url('image/체크아이콘.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 a{

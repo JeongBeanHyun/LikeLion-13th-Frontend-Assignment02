@@ -23,7 +23,22 @@ function renderTodos(){
 
         li.appendChild(checkbox);
         li.appendChild(span);
-        li.onclick = () => removeTodo(index);
+
+        // li.onclick = () => removeTodo(index);
+        // js 2번 조건
+        li.addEventListener('click', function(){
+            checkbox.checked = !checkbox.checked;
+
+            if(checkbox.checked){
+                span.style.textDecoration = "line-through";
+                span.style.color = "gray";
+            }
+            else{
+                span.style.textDecoration = "none";
+                span.style.color = "black";
+            }
+        })
+        
         list.appendChild(li);
     });
 }
