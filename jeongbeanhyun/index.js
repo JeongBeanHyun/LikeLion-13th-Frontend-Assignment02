@@ -38,7 +38,7 @@ function renderTodos(){
                 span.style.color = "black";
             }
         })
-        
+
         list.appendChild(li);
     });
 }
@@ -50,7 +50,6 @@ function removeTodo(index){
 
 input.addEventListener("keyup", function(event){ // js 1번 조건
     if(event.key === "Enter"){
-        event.preventDefault();
         addTodo();
     }
 });
